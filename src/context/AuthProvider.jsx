@@ -53,6 +53,7 @@ const AuthProvider = ({ children }) => {
     try {
       const url = `/veterinarios/perfil/${datos._id}`;
       await clienteAxios.put(url, datos, config);
+      setAuth(datos);
       return {
         msg: "Almacenado correctamente",
         error: false,
